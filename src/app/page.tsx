@@ -9,6 +9,7 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import { Checkbox } from "@/components/ui/checkbox";
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
 import { useRef, useState, useEffect } from 'react';
+import Image from 'next/image';
 
 // Type definitions for better type safety
 interface ElementInfo {
@@ -848,10 +849,12 @@ function MediaExamples() {
 
                 <div>
                   <h4 className="font-semibold mb-2">Image Element</h4>
-                  <img
+                  <Image
                     ref={imageRef}
                     src="https://via.placeholder.com/300x200/4F46E5/FFFFFF?text=Demo+Image"
                     alt="Demo image"
+                    width={300}
+                    height={200}
                     className="border rounded"
                     onLoad={updateMediaInfo}
                   />
